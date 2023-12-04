@@ -1,38 +1,41 @@
-let nickName
 let wins
 let defeats
 
-function rankCalculator(wins, defeats) {
-    let rank
+function amountCalculator(wins, defeats){
     let totalAmount = wins - defeats
-    if(totalAmount < 10){
-        rank = "Ferro"
-        return rank
+    return totalAmount
+}
 
-    }else if(totalAmount >=11 && totalAmount <=20){
+function rankClassificator(amountCalculator) {
+    let rank   
+    if(amountCalculator < 10){
+        rank ="Ferro"
+        console.log(`O Herói tem de saldo ${amountCalculator} e está no nivel de ${rank}`)
+        
+    }else if(amountCalculator >=11 && amountCalculator <=20){
         rank = "Bronze"
-        return rank
+        console.log(`O Herói tem de saldo ${amountCalculator} e está no nivel de ${rank}`)
     
-    }else if(totalAmount >=21 && totalAmount <=50){
+    }else if(amountCalculator >=21 && amountCalculator <=50){
         rank = "Prata"
-        return rank
+        console.log(`O Herói tem de saldo ${amountCalculator} e está no nivel de ${rank}`)
     
-    }else if(totalAmount >=51 && totalAmount <=80){
+    }else if(amountCalculator >=51 && amountCalculator <=80){
         rank = "Ouro"
-        return rank
+        console.log(`O Herói tem de saldo ${amountCalculator} e está no nivel de ${rank}`)
     
-    }else if(totalAmount >=81 && totalAmount <=90){
+    }else if(amountCalculator >=81 && amountCalculator <=90){
         rank = "Diamante"
-        return rank
+        console.log(`O Herói tem de saldo ${amountCalculator} e está no nivel de ${rank}`)
     
-    }else if(totalAmount >=91 && totalAmount <=100){
+    }else if(amountCalculator >=91 && amountCalculator <=100){
         rank = "Lendário"
-        return rank
+        console.log(`O Herói tem de saldo ${amountCalculator} e está no nivel de ${rank}`)
     
     }else{
         rank = "Imortal"
-        return rank   
-    }
-
-    
+        console.log(`O Herói tem de saldo ${amountCalculator} e está no nivel de ${rank}`)   
+    }   
 }
+
+rankClassificator(amountCalculator(10, 5))
